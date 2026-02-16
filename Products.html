@@ -2,188 +2,215 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Header - Tailwind</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Header - Tailwind</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-50">
-  <!-- header section  -->
-  <header class="container mx-auto ">
+    <!-- header section  -->
+    <header class="container mx-auto ">
 
-    <div class="navbar ">
+        <div class="navbar ">
 
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a href="/"
-                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Home</a>
-            </li>
-            <li><a href="./Products.html"
-                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Products</a>
-            </li>
-            <li><a href="#"
-                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">About</a>
-            </li>
-            <li><a href="#"
-                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Contact</a>
-            </li>
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a href="/"
+                                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Home</a>
+                        </li>
+                        <li><a href="./Products.html"
+                                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Products</a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">About</a>
+                        </li>
+                        <li><a href="#"
+                                class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Contact</a>
+                        </li>
 
-          </ul>
+                    </ul>
+                </div>
+                <a href="/" class="btn btn-ghost text-xl">SwiftCart</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="/"
+                            class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Home</a>
+                    </li>
+                    <li><a href="./Products.html"
+                            class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Products</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">About</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Contact</a>
+                    </li>
+            </div>
+            <div class="navbar-end">
+                <a class=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
         </div>
-        <a href="/" class="btn btn-ghost text-xl">SwiftCart</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a href="/"
-              class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Home</a>
-          </li>
-          <li><a href="./Products.html"
-              class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Products</a>
-          </li>
-          <li><a href="#"
-              class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">About</a>
-          </li>
-          <li><a href="#"
-              class="px-4 py-2 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">Contact</a>
-          </li>
-      </div>
-      <div class="navbar-end">
-        <a class=""><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
-    </div>
-  </header>
+    </header>
 
     <section id="Trending" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4">
 
-      <h2 class="text-3xl font-bold text-center text-slate-900 mb-8">Our Products</h2>
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-8">Our Products</h2>
 
-      <div id="ProductsCategores" class="tab-section flex flex-auto gap-3 justify-center py-4" >
-      
-
- <button class="btn  btn-sm rounded-4xl  bg-indigo-600 border-none text-white">All</button>
-       
-      
-       
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-
-        <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
-          <figure class="">
-            <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
-              <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Backpack" class="object-contain h-full" />
+            <div id="ProductsCategores" class="tab-section flex flex-auto gap-3 justify-center py-4">
+                <button onclick="loadAllProduct()" class="btn  btn-sm rounded-4xl bg-indigo-600 border-none text-white">All</button>
             </div>
-          </figure>
-          <div class="card-body px-6 py-4">
-            <div class="flex justify-between items-center mb-2">
-              <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's Clothing</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-                <span class="text-sm font-medium text-slate-600">3.9 (120)</span>
-              </div>
+
+            <div id="productContainer" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
+
+                <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <figure class="">
+                        <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
+                            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Backpack"
+                                class="object-contain h-full" />
+                        </div>
+                    </figure>
+                    <div class="card-body px-6 py-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's
+                                Clothing</span>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                <span class="text-sm font-medium text-slate-600">3.9 (120)</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title text-slate-800 text-lg line-clamp-1">Fjallraven - Foldsack No. 1 Backpack,
+                            ...</h3>
+                        <p class="text-2xl font-bold text-slate-900 mb-4">$109.95</p>
+                        <div class="card-actions grid grid-cols-2 gap-3">
+                            <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
+                                    class="fa-regular fa-eye"></i> Details</button>
+                            <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <figure class="">
+                        <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
+                            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Backpack"
+                                class="object-contain h-full" />
+                        </div>
+                    </figure>
+                    <div class="card-body px-6 py-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's
+                                Clothing</span>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                <span class="text-sm font-medium text-slate-600">3.9 (120)</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title text-slate-800 text-lg line-clamp-1">Fjallraven - Foldsack No. 1 Backpack,
+                            ...</h3>
+                        <p class="text-2xl font-bold text-slate-900 mb-4">$109.95</p>
+                        <div class="card-actions grid grid-cols-2 gap-3">
+                            <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
+                                    class="fa-regular fa-eye"></i> Details</button>
+                            <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <figure class="">
+                        <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
+                            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="T-Shirt"
+                                class="object-contain h-full" />
+                        </div>
+                    </figure>
+                    <div class="card-body px-6 py-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's
+                                Clothing</span>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                <span class="text-sm font-medium text-slate-600">4.1 (259)</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title text-slate-800 text-lg line-clamp-1">Mens Casual Premium Slim Fit T-Shirts
+                        </h3>
+                        <p class="text-2xl font-bold text-slate-900 mb-4">$22.3</p>
+                        <div class="card-actions grid grid-cols-2 gap-3">
+                            <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
+                                    class="fa-regular fa-eye"></i> Details</button>
+                            <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <figure class="">
+                        <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
+                            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Jacket"
+                                class="object-contain h-full" />
+                        </div>
+                    </figure>
+                    <div class="card-body px-6 py-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's
+                                Clothing</span>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                <span class="text-sm font-medium text-slate-600">4.7 (500)</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title text-slate-800 text-lg line-clamp-1">Mens Cotton Jacket</h3>
+                        <p class="text-2xl font-bold text-slate-900 mb-4">$55.99</p>
+                        <div class="card-actions grid grid-cols-2 gap-3">
+                            <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
+                                    class="fa-regular fa-eye"></i> Details</button>
+                            <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
+                                    class="fa-solid fa-cart-shopping"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <h3 class="card-title text-slate-800 text-lg line-clamp-1">Fjallraven - Foldsack No. 1 Backpack, ...</h3>
-            <p class="text-2xl font-bold text-slate-900 mb-4">$109.95</p>
-            <div class="card-actions grid grid-cols-2 gap-3">
-              <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
-                  class="fa-regular fa-eye"></i> Details</button>
-              <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
-                  class="fa-solid fa-cart-shopping"></i> Add</button>
-            </div>
-          </div>
         </div>
- <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
-          <figure class="">
-            <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
-              <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Backpack" class="object-contain h-full" />
-            </div>
-          </figure>
-          <div class="card-body px-6 py-4">
-            <div class="flex justify-between items-center mb-2">
-              <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's Clothing</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-                <span class="text-sm font-medium text-slate-600">3.9 (120)</span>
-              </div>
-            </div>
-            <h3 class="card-title text-slate-800 text-lg line-clamp-1">Fjallraven - Foldsack No. 1 Backpack, ...</h3>
-            <p class="text-2xl font-bold text-slate-900 mb-4">$109.95</p>
-            <div class="card-actions grid grid-cols-2 gap-3">
-              <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
-                  class="fa-regular fa-eye"></i> Details</button>
-              <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
-                  class="fa-solid fa-cart-shopping"></i> Add</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
-          <figure class="">
-            <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
-              <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="T-Shirt" class="object-contain h-full" />
-            </div>
-          </figure>
-          <div class="card-body px-6 py-4">
-            <div class="flex justify-between items-center mb-2">
-              <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's Clothing</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-                <span class="text-sm font-medium text-slate-600">4.1 (259)</span>
-              </div>
-            </div>
-            <h3 class="card-title text-slate-800 text-lg line-clamp-1">Mens Casual Premium Slim Fit T-Shirts</h3>
-            <p class="text-2xl font-bold text-slate-900 mb-4">$22.3</p>
-            <div class="card-actions grid grid-cols-2 gap-3">
-              <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
-                  class="fa-regular fa-eye"></i> Details</button>
-              <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
-                  class="fa-solid fa-cart-shopping"></i> Add</button>
-            </div>
-          </div>
-        </div>
+    </section>
 
-        <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
-          <figure class="">
-            <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
-              <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="Jacket" class="object-contain h-full" />
-            </div>
-          </figure>
-          <div class="card-body px-6 py-4">
-            <div class="flex justify-between items-center mb-2">
-              <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">Men's Clothing</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
-                <span class="text-sm font-medium text-slate-600">4.7 (500)</span>
-              </div>
-            </div>
-            <h3 class="card-title text-slate-800 text-lg line-clamp-1">Mens Cotton Jacket</h3>
-            <p class="text-2xl font-bold text-slate-900 mb-4">$55.99</p>
-            <div class="card-actions grid grid-cols-2 gap-3">
-              <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
-                  class="fa-regular fa-eye"></i> Details</button>
-              <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
-                  class="fa-solid fa-cart-shopping"></i> Add</button>
-            </div>
-          </div>
-        </div>
+<!-- You can open the modal using ID.showModal() method -->
+<dialog id="productDetails" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <div id="detailsData"></div>
+    
+  </div>
+</dialog>
 
-      </div>
-    </div>
-  </section>
+    <!-- loader spener  -->
 
-  <script src="./loadProducts.js"></script>
+<!-- Open the modal using ID.showModal() method -->
+<dialog id="speener" class="modal  backdrop:bg-black/80 backdrop:backdrop-blur-sm  modal-bottom sm:modal-middle">
+  <div class="modal-box text-center bg-transparent shadow-none">
+    <span class="loading loading-ring loading-xl w-32 h-32 bg-indigo-600"></span>
+  </div>
+</dialog>
+    <script src="./loadProducts.js"></script>
 </body>
 
 </html>

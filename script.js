@@ -42,7 +42,7 @@ div.classList.add('card', 'bg-base-100', 'border', 'border-gray-100', 'shadow-sm
               </div>
             </div>
             <h3 class="card-title text-slate-800 text-lg line-clamp-1">${x.title}</h3>
-            <p class="text-2xl font-bold text-slate-900 mb-4"><span>৳<span>${x.price}/= </p>
+            <p class="text-2xl font-bold text-slate-900 mb-4"><i class="fa-solid fa-bangladeshi-taka-sign"></i>${x.price}/= </p>
             <div class="card-actions grid grid-cols-2 gap-3">
               <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
                   class="fa-regular fa-eye"></i> Details</button>
