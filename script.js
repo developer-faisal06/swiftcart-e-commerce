@@ -4,9 +4,9 @@ const loadAllProduct = async () => {
   const products = await res.json();
   const limitedProducts=products.slice(0,3);
   LetestProducts(limitedProducts);
+  allProducts(products);
 };
 
-loadAllProduct();
 
 const LetestProducts = (products) => {
   const leatestProducts = document.getElementById("leatestProducts");
@@ -56,3 +56,8 @@ div.classList.add('card', 'bg-base-100', 'border', 'border-gray-100', 'shadow-sm
     leatestProducts.append(div);
   });
 };
+
+
+
+
+loadAllProduct();
