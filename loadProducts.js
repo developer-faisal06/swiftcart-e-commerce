@@ -7,7 +7,8 @@ const loader=(istrue)=>{
     }
 }
 
-const loadAllProduct = async () => {
+const loadAllProduct = async (clickBtn) => {
+    updateActiveBtn(clickBtn);
     loader(true);
 
   const url = "https://fakestoreapi.com/products";
@@ -25,6 +26,7 @@ const productsCategory=async()=>{
 const url='https://fakestoreapi.com/products/categories'
 const res=await fetch(url)
 const categories=await res.json()
+
 displayCategoryLavel(categories);
 }
 
@@ -36,21 +38,39 @@ for(category of categories){
     //   console.log(pureCategory);
     const div=document.createElement('div');
     div.classList.add('teb-section', 'justify-center' );
-    div.innerHTML=`<button onClick="tabProducts('${safeCategory}')" class="btn  btn-sm rounded-4xl  border-indigo-600 text-dark hover:bg-indigo-600 hover:text-white">${category}</button>`;
+    div.innerHTML=`<button  onClick="tabProducts('${safeCategory}', this)" class="btn category-btn btn-sm rounded-4xl  border-indigo-600 text-dark hover:bg-indigo-600 hover:text-white">${category}</button>`;
     productsCategory.append(div);
         // console.log(category);
       
 }
 }
+const updateActiveBtn = (clickBtn) => {
+    const allBtn = document.querySelectorAll('.category-btn'); 
 
-const tabProducts= async (category)=>{
+    allBtn.forEach(x => {
+        x.classList.remove('btn-primary', 'text-white');
+               
+        x.classList.add('border-indigo-600', 'text-dark');
+        x.classList.remove('bg-indigo-600'); 
+    });
+
+    if (clickBtn) {
+        
+        clickBtn.classList.add('btn-primary', 'text-white');
+        clickBtn.classList.remove('text-dark', 'border-indigo-600');
+    }
+}
+
+const tabProducts= async (category , clickBtn)=>{
+    updateActiveBtn(clickBtn);
             loader(true);
 
     const url=`https://fakestoreapi.com/products/category/${category}`
     const res= await fetch(url)
     const products= await res.json();
     // console.log(url);
-    console.log(products);
+    // console.log(products);
+
 
     const productContainer=document.getElementById('productContainer');
         productContainer.innerHTML='';
@@ -82,7 +102,7 @@ const tabProducts= async (category)=>{
                     </figure>
                     <div class="card-body px-6 py-4">
                         <div class="flex justify-between items-center mb-2">
-                            <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">${x.category}</span>
+                            <span class="badge absolute top-2 left-2  text-indigo-600 bg-indigo-100 border-none px-3 py-3">${x.category}</span>
                             <div class="flex items-center gap-1">
                                 <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
                                 <span class="text-sm font-medium text-slate-600">${x.rating.rate} (${x.rating.count})</span>
@@ -91,7 +111,7 @@ const tabProducts= async (category)=>{
                         <h3 class="card-title text-slate-800 text-lg line-clamp-1">${x.title}</h3>
                         <p class="text-2xl font-bold text-slate-900 mb-4"><i class="fa-solid fa-bangladeshi-taka-sign"></i>${x.price}/=</p>
                         <div class="card-actions grid grid-cols-2 gap-3">
-                            <button class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
+                            <button onClick="productsDetails(${x.id})" class="btn btn-outline border-slate-200 hover:bg-slate-50 hover:text-slate-800"><i
                                     class="fa-regular fa-eye"></i> Details</button>
                             <button class="btn btn-primary bg-indigo-600 border-none text-white"><i
                                     class="fa-solid fa-cart-shopping"></i> Add</button>
@@ -126,7 +146,7 @@ productContainer.innerHTML='';
                     </figure>
                     <div class="card-body px-6 py-4">
                         <div class="flex justify-between items-center mb-2">
-                            <span class="badge badge-ghost text-indigo-600 bg-indigo-50 border-none px-3 py-3">${x.category}</span>
+                            <span class="badge absolute top-2 left-2  text-indigo-600 bg-indigo-100 border-none px-3 py-3">${x.category}</span>
                             <div class="flex items-center gap-1">
                                 <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
                                 <span class="text-sm font-medium text-slate-600">${x.rating.rate} (${x.rating.count})</span>

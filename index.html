@@ -12,7 +12,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 ">
   <!-- header section  -->
   <header class="container mx-auto ">
 
@@ -42,7 +42,7 @@
 
           </ul>
         </div>
-        <a href="/" class="btn btn-ghost text-xl">SwiftCart</a>
+        <a href="/" class=" btn-ghost text-xl">SwiftCart</a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -82,7 +82,7 @@
     </div>
   </sectin>
 
-<!-- genaral info section  -->
+  <!-- genaral info section  -->
   <section id="info-section" class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
@@ -138,24 +138,24 @@
   <section id="Trending" class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <div class="flex justify-between">
-<h2 class="text-3xl font-bold text-slate-900 mb-8">Trending Now</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-8">Trending Now</h2>
         <a href="./Products.html" class="btn  btn-sm rounded-4xl  bg-indigo-600 border-none text-white">See All</a>
 
       </div>
 
-      
 
-      <div id="leatestProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- loader spener  -->
 
-<!-- Open the modal using ID.showModal() method -->
-<dialog id="my_modal_5" class="modal bg-transparent modal-bottom sm:modal-middle">
-  <div class="modal-box text-center bg-transparent shadow-none">
-    <span class="loading loading-ring loading-xl w-32 h-32 bg-indigo-600"></span>
-  </div>
-</dialog>
+      <div id="leatestProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- loader spener  -->
 
-<!-- 
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal bg-transparent modal-bottom sm:modal-middle">
+          <div class="modal-box text-center bg-transparent shadow-none">
+            <span class="loading loading-ring loading-xl w-32 h-32 bg-indigo-600"></span>
+          </div>
+        </dialog>
+
+        <!-- 
         <div class="card bg-base-100 border border-gray-100 shadow-sm hover:shadow-md transition">
           <figure class="px-4 pt-4">
             <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
@@ -180,13 +180,64 @@
             </div>
           </div>
         </div> -->
-
       </div>
     </div>
   </section>
 
+  <!-- You Product Details method -->
+  <dialog id="productDetails" class="modal">
+    <div class="modal-box">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      </form>
+      <div id="detailsData"></div>
+
+    </div>
+  </dialog>
+
+  <!-- footer section  -->
+  <section id="footer" class="container mx-auto">
+
+    <footer class=" footer bg-base-200 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 p-10">
+      <aside>
+        <a href="/" class=" btn-ghost text-xl">SwiftCart</a>
+        <p>
+          All In One place, where you can buy all branded exesories, cloth, mens fasion, womens fashion, Have a good
+          day, Thanks for stay with us
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Products</h6>
+        <a class="link link-hover">Mens</a>
+        <a class="link link-hover">Womens</a>
+        <a class="link link-hover">jewelery</a>
+        <a class="link link-hover">Electronics</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Blog</a>
+      </nav>
+
+      <form>
+        <h6 class="footer-title">Newsletter</h6>
+        <fieldset class="w-80">
+          <label>Enter your email address</label>
+          <div class="join">
+            <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+
+    </footer>
+
+  </section>
 
   <script src="./script.js"></script>
+
 </body>
 
 </html>
