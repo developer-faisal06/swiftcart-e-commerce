@@ -2,31 +2,38 @@ const loadAllProduct = async () => {
   const url = "https://fakestoreapi.com/products";
   const res = await fetch(url);
   const products = await res.json();
-  const limitedProducts=products.slice(0,4);
+  const limitedProducts = products.slice(0, 4);
   LetestProducts(limitedProducts);
   allProducts(products);
 };
 
-
 const LetestProducts = (products) => {
   const leatestProducts = document.getElementById("leatestProducts");
 
-//   {
-//     "id": 19,
-//     "title": "Opna Women's Short Sleeve Moisture",
-//     "price": 7.95,
-//     "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
-//     "category": "women's clothing",
-//     "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
-//     "rating": {
-//         "rate": 4.5,
-//         "count": 146
-//     }
-// }
+  //   {
+  //     "id": 19,
+  //     "title": "Opna Women's Short Sleeve Moisture",
+  //     "price": 7.95,
+  //     "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+  //     "category": "women's clothing",
+  //     "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png",
+  //     "rating": {
+  //         "rate": 4.5,
+  //         "count": 146
+  //     }
+  // }
 
   products.forEach((x) => {
     const div = document.createElement("div");
-div.classList.add('card', 'bg-base-100', 'border', 'border-gray-100', 'shadow-sm', 'hover:shadow-md', 'transition');
+    div.classList.add(
+      "card",
+      "bg-base-100",
+      "border",
+      "border-gray-100",
+      "shadow-sm",
+      "hover:shadow-md",
+      "transition",
+    );
     div.innerHTML = `
 <figure class="">
             <div class="bg-slate-100 rounded-xl p-8 w-full flex justify-center h-64">
@@ -57,17 +64,16 @@ div.classList.add('card', 'bg-base-100', 'border', 'border-gray-100', 'shadow-sm
   });
 };
 
-const productsDetails=async(id)=>{
+const productsDetails = async (id) => {
+  const productsDetailsUrl = `https://fakestoreapi.com/products/${id}`;
+  const res = await fetch(productsDetailsUrl);
+  const data = await res.json();
+  // console.log(data);
 
-    const productsDetailsUrl=`https://fakestoreapi.com/products/${id}`
-    const res=await fetch(productsDetailsUrl)
-    const data=await res.json()
-    console.log(data);
-
-    const detailsModal=document.getElementById('productDetails');
-    detailsModal.showModal()
-    const detailsData=document.getElementById('detailsData');
-    detailsData.innerHTML=`
+  const detailsModal = document.getElementById("productDetails");
+  detailsModal.showModal();
+  const detailsData = document.getElementById("detailsData");
+  detailsData.innerHTML = `
                  <div class="flex-1 flex flex-col justify-between">
                 <div>
                     <h2 class="text-2xl font-bold text-gray-800 leading-tight">${data.title}</h2>
@@ -77,17 +83,14 @@ const productsDetails=async(id)=>{
                            <span class="font-semibold">${data.rating.rate}</span>
                         </div>
                         <span class="text-gray-900 text-sm">(${data.rating.count} reviews)</span>
-                    </div>
-                    
+                    </div>                    
                     <div class="divider my-2"></div>
                     
                     <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">
                         ${data.description}
                     </p>
-                    
                     <p class="text-3xl font-extrabold text-indigo-600 mt-4">Price:<i class="fa-solid fa-bangladeshi-taka-sign"></i>${data.price}/=</p>
                 </div>
-
                 <div class="flex gap-3 mt-6">
                     <button class="btn btn-primary flex-1">Buy Now</button>
                     <button class="btn btn-outline btn-primary flex-1">
@@ -99,8 +102,6 @@ const productsDetails=async(id)=>{
                 </div>
             </div>
     `;
-    
-}
-
+};
 
 loadAllProduct();
